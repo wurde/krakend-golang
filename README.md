@@ -31,3 +31,8 @@ curl -i http://localhost:8080/frontpage
 #=>   ]
 #=> }
 ```
+
+## License
+
+This project is __FREE__ to use, reuse, remix, and resell.
+This is made possible by the [MIT license](/LICENSE).
