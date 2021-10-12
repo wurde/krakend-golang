@@ -1,0 +1,111 @@
+{
+  "version": 2,
+  "timeout": "3000ms",
+  "cache_ttl": "300s",
+  "output_encoding": "json",
+  "name": "krakend-golang",
+  "read_timeout": "30s",
+  "write_timeout": "30s",
+  "read_header_timeout": "5s",
+  "idle_timeout": "5s",
+  "endpoints": [
+    {
+      "endpoint": "/posts",
+      "method": "GET",
+      "output_encoding": "json",
+      "backend": [
+        {
+          "url_pattern": "/posts",
+          "encoding": "json",
+          "method": "GET",
+          "host": [
+            "http://localhost:5040"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/posts",
+      "method": "POST",
+      "output_encoding": "json",
+      "backend": [
+        {
+          "url_pattern": "/posts",
+          "encoding": "json",
+          "method": "POST",
+          "host": [
+            "http://localhost:5040"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/posts/{id}",
+      "method": "GET",
+      "output_encoding": "json",
+      "backend": [
+        {
+          "url_pattern": "/posts/{id}",
+          "encoding": "json",
+          "method": "GET",
+          "host": [
+            "http://localhost:5040"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/posts/{id}",
+      "method": "PATCH",
+      "output_encoding": "json",
+      "backend": [
+        {
+          "url_pattern": "/posts/{id}",
+          "encoding": "json",
+          "method": "PATCH",
+          "host": [
+            "http://localhost:5040"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/posts/{id}",
+      "method": "DELETE",
+      "output_encoding": "json",
+      "backend": [
+        {
+          "url_pattern": "/posts/{id}",
+          "encoding": "json",
+          "method": "DELETE",
+          "host": [
+            "http://localhost:5040"
+          ]
+        }
+      ]
+    },
+    {
+      "endpoint": "/frontpage",
+      "method": "GET",
+      "output_encoding": "json",
+      "backend": [
+        {
+          "url_pattern": "/posts",
+          "encoding": "json",
+          "method": "GET",
+          "host": [
+            "http://localhost:5040"
+          ]
+        },
+        {
+          "url_pattern": "/comments",
+          "encoding": "json",
+          "method": "GET",
+          "host": [
+            "http://localhost:5050"
+          ]
+        }
+      ]
+    }
+  ]
+}
